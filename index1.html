@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalsCo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg mt-3">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="#">RentalsCo</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="#">Make Reservations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link mx-lg-2" href="#">Activity</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link mx-lg-2" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gap-5">
+                <button class="navbar-toggler border border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="btn btn-success" type="button" id="sign-in-btn">Sign In</button>
+                <button class="btn btn-light" type="button" id="sign-up-btn">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <section id="hero" class="">
+        <div class="container pt-5" id="hero-section">
+            <div class="row">
+                <div class="col-12" id="maintext">
+                    <h1 class="text-center">Find Your Favoite Place</h1>
+                    <p class="text-center">The best prices for over 2 million over properties worldwide
+                    </p>
+                </div>
+
+                <div class="d-flex" id="search-form">
+                    <div class="row">
+                        <nav class="navs">
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link" id="nav-all-acomodations-tab" data-bs-toggle="tab" href="#"
+                                    role="tab" aria-controls="nav-all-acomodations" aria-selected="true">All
+                                    Acomodations</a>
+                                <a class="nav-item nav-link" id="nav-villa-tab" data-bs-toggle="tab" href="#" role="tab"
+                                    aria-controls="nav-villa" aria-selected="false">Villa</a>
+                                <a class="nav-item nav-link" id="nav-hotel-tab" data-bs-toggle="tab" href="#" role="tab"
+                                    aria-controls="nav-hotel" aria-selected="false">Hotel</a>
+                                <a class="nav-item nav-link" id="nav-apartment-tab" data-bs-toggle="tab" href="#"
+                                    role="tab" aria-controls="nav-apartment" aria-selected="false">Apartment</a>
+                                <a class="nav-item nav-link" id="nav-home-stay-tab" data-bs-toggle="tab" href="#"
+                                    role="tab" aria-controls="nav-home-stay" aria-selected="false">Home Stay</a>
+                            </div>
+                        </nav>
+                        <form>
+                            <div class="row g-lg-3" id="nav-options">
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="location1">Location 1</label>
+                                        <input type="text" id="location1" class="form-control" placeholder="First name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="check-in">Check In</label>
+                                        <input type="text" id="check-in" class="form-control" placeholder="Add date">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="check-out">Check Out</label>
+                                        <input type="text" id="check-out" class="form-control" placeholder="Add date">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <div class="form-group">
+                                        <label for="participants">Participants</label>
+                                        <input type="text" id="participants" class="form-control"
+                                            placeholder="Add guests">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="form-check-container mt-2">
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="nightCheckbox"
+                                    value="option1" aria-label="night">/Night
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="hourCheckbox"
+                                    value="option2" aria-label="hour">/Hour
+                            </div>
+                            <button type="button"
+                                class="btn btn-md btn-success d-flex align-items-center justify-content-center"
+                                id="search-btn">
+                                <i class="fa-solid fa-magnifying-glass me-2"></i>
+                                <span class="d-none d-md-inline">Search Accommodations</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cards" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <h3 class="mb-3">Holiday accommodations recommended for you</h3>
+                    <button class="btn btn-dark btn-lg">Filters</button>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row cards-row">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">Paris</h5>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="paris.jpg" alt="Paris" class="card-img-top">
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-dark"><strong>$95</strong> /Night</p>
+                                <a href="#" class="btn btn-dark">View Rooms</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">Bali</h5>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="bali.jpg" alt="Bali" class="card-img-top">
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-dark"><strong>$85</strong> /Night</p>
+                                <a href="#" class="btn btn-dark">View Rooms</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">New York</h5>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <img src="newyork.jpg" alt="New York" class="card-img-top">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="text-dark"><strong>$125</strong> /Night</p>
+                                <a href="#" class="btn btn-dark">View Rooms</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Reviews Section -->
+
+    <section id="reviews" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-text">"Great service and amazing quality! Highly recommend."</p>
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text"><small class="text-muted">CEO, Example Corp</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-text">"The team is very professional and the results exceeded my
+                                expectations."</p>
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text"><small class="text-muted">Marketing Manager, Tech Innovators</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card d-flex flex-column">
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-text">"A fantastic experience from start to finish."</p>
+                            <h5 class="card-title">Alice Johnson</h5>
+                            <p class="card-text"><small class="text-muted">Founder, GreenTech Solutions</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-message">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h2>Our Office</h2>
+                    <p>123 Travel St, Wanderlust City, WL 12345</p>
+                    <p>Email: info@travelagency.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 By venus-00. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

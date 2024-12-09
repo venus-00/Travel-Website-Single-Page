@@ -1,0 +1,150 @@
+#sign-in-btn,
+#sign-up-btn {
+    border-radius: 25px;
+}
+
+#hero-section {
+    background: url('lakehero.jpg') center center/cover no-repeat;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-tab {
+    text-align: center;
+    justify-content: center;
+}
+
+.navs {
+    background-color: #eee;
+}
+
+a.nav-item {
+    color: black;
+}
+
+
+#nav-options {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#search-form {
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.form-check-container {
+    display: flex;
+    align-items: center;
+}
+
+.form-check {
+    margin-right: 10px;
+}
+
+button {
+    margin-left: auto;
+}
+
+h1,
+p {
+    color: white;
+}
+
+#search-btn {
+    border-radius: 20px;
+}
+
+#buttons {
+    position: relative;
+}
+
+img {
+    width: 280px;
+    height: 180px;
+    padding-right: 25px;
+}
+
+.card-text {
+    font-size: 1.4rem;
+    color: #000;
+    margin-top: 10px;
+}
+
+.card {
+    border-style: none !important;
+}
+
+.fa-heart {
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #16784a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.col-md-6 p {
+    color: #000 !important;
+    font-size: 1.3em;
+}
+
+#main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    
+}
+
+#reviews {
+    background-card: #eee !important;
+    .card {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+.cards-row {
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 460px) and (min-width: 360px) {
+    .cards-row {
+        display: block;
+    }
+
+    #search-form .row {
+        background-color: #fff;
+    }
+
+    #maintext {
+        position: absolute;
+        top: 20%;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .btn-message {
+        margin-bottom: 20px;
+    }
+
+}
